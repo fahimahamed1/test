@@ -54,9 +54,9 @@ Edit the `.env` file with your configuration:
 
 ```env
 BOT_TOKEN=your_bot_token_here
-HOST_URL=http://localhost
-PORT=3000
-ADMINS=123456789,987654321
+HOST_URL=your_host_url_here
+PORT=3000 (optional)
+ADMINS=admin_chatid_here
 ```
 
 ### 3. Install dependencies
@@ -84,8 +84,8 @@ You can run this bot using **Docker** or **Docker Compose** for easier deploymen
 ```bash
 docker run -d -p 3000:3000 --name phishing-bot-container \
   -e BOT_TOKEN=your_bot_token_here \
-  -e HOST_URL=http://localhost \
-  -e ADMINS=5630435349,1234567890 \
+  -e HOST_URL=your_host_url_here \
+  -e ADMINS=admin_chatid_here \
   fahimahamed/phishing-bot:latest
 ```
 
@@ -97,9 +97,9 @@ docker run -d -p 3000:3000 --name phishing-bot-container \
 
 ```env
 BOT_TOKEN=your_bot_token_here
-HOST_URL=http://localhost
-PORT=3000
-ADMINS=5630435349,1234567890
+HOST_URL=your_host_url_here
+PORT=3000 (optional)
+ADMINS=admin_chatid_here
 ```
 
 2. Create a `docker-compose.yml` file:
@@ -135,14 +135,6 @@ docker-compose up -d
 
 ---
 
-## 💬 Example Admin Commands
-
-- `/approve <user_id>` – Approve a user manually
-- `/suspend <user_id>` – Suspend a user
-- Admins can also use inline buttons within Telegram to manage users quickly.
-
----
-
 ## 🧩 Troubleshooting
 
 - **Bot not responding?**
@@ -167,3 +159,5 @@ Feel free to open issues or submit pull requests! Suggestions and improvements a
 This project is open source and free to use under the MIT License.
 
 ---
+
+If you want, I can also help you add example admin commands, screenshots, or a quick start guide section — just ask!
